@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>POC Software for LEM</title>
+    <link rel="stylesheet" href="https://use.typekit.net/bly7gqh.css">
+    <link rel="stylesheet" href="static/fa/all.min.css">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link href="static/cal/datepicker.min.css" rel="stylesheet">
+    <script src="static/cal/datepicker.min.js"></script>
+    <script src="static/js/moment.js"></script>
+    <script src="static/js/load.js"></script>
+    <script src="static/js/script.js"></script>
+
+</head>
+<body>
+    <div class="loading-box">
+        <img src="static/img/loading.png" alt="loading-icon">
+    </div>
+    <div class="settings-box">
+        <h1>SETTINGS</h1>
+        <hr>
+        <form action="" class="settings-form">
+            <!-- <div class="button-radio">
+                <input type="radio" id="time-selection" name="" value="real">
+                <input type="radio" id="time-selection" name="" value="single">
+            </div>
+            <div class="button-box">
+                <div class="real-time" id="selected-box" >REAL TIME</div>
+                <div class="single-time">SINGLE TIME</div>
+            </div> -->
+            <h2>DATE</h2>
+            <input data-toggle="datepicker" class="datepicker">
+            <div class="hour-bar">
+                <h2>HOUR</h2>
+                <p>12:00</p>
+            </div>
+            <input type="range" name="clock" min="0" max="23" id="slider"/>
+            <input class="settings-button" type="submit" value="GO">
+        </form>
+    </div>
+
+    <div class="dim">
+        <div class="help-pop-up">
+            <h1>HOW TO USE</h1>
+            <hr>
+            <h4>Instructions to Use. </h4>
+        </div>
+    </div>
+
+    <div class="top-bar">
+        <div>
+            <h1 class="header">POC Software for LEM</h1>
+        </div>
+        <div>
+            <i class="fas fa-info-circle" id="info-button" class="bar-selected"></i>
+            <i class="fas fa-sliders-h" id="settings-button" class=""></i>
+        </div>
+    </div>
+
+    <div id="g-map"></div>
+    <!-- TODO: If this ever goes live, make sure to restrict the API key to the domain -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDua0uJqAag9gvpEjI7Uu1kipJcUCE-fBg&callback=initMap"
+        async defer></script>
+
+
+    <div class="info-box">
+        <div class="inner-info-box">
+            <div class="info-content"></div>
+            <button id="close-info">x</button>
+        </div>
+    </div>
+
+</body>
+</html>

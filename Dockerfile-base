@@ -1,0 +1,15 @@
+FROM python:2.7
+
+WORKDIR /app
+
+COPY requirements.txt /app
+COPY mlpy-dtw /app/mlpy-dtw
+
+RUN pip install --trusted-host pypi.python.org -r requirements.txt
+
+RUN pip install --trusted-host pypi.python.org tslearn
+
+RUN apt-get update \
+    && apt-get install -y libgsl-dev \
+    && cd mlpy-dtw \
+    && python setup.py install

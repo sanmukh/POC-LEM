@@ -1,0 +1,8 @@
+Flask
+Redis
+numpy
+pandas
+cvxopt
+scipy
+scikit-learn
+cython
